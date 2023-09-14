@@ -196,7 +196,7 @@ agent.customizeCollection('contract', collection => {
 // });
 
 // Expose an HTTP endpoint.
-agent.mountOnStandaloneServer(Number(process.env.APPLICATION_PORT));
+agent.mountOnStandaloneServer(Number(process.env.APPLICATION_PORT || process.env.PORT));
 
 // Start the agent.
 agent.start().catch(error => {
