@@ -1,4 +1,42 @@
 /* eslint-disable */
+import {
+  CollectionCustomizer,
+  TAggregation,
+  TConditionTree,
+  TPaginatedFilter,
+  TPartialRow,
+  TSortClause
+} from '@forestadmin/agent';
+
+export type ContractCustomizer = CollectionCustomizer<Schema, 'contract'>;
+export type ContractRecord = TPartialRow<Schema, 'contract'>;
+export type ContractConditionTree = TConditionTree<Schema, 'contract'>;
+export type ContractFilter = TPaginatedFilter<Schema, 'contract'>;
+export type ContractSortClause = TSortClause<Schema, 'contract'>;
+export type ContractAggregation = TAggregation<Schema, 'contract'>;
+
+export type CustomerCustomizer = CollectionCustomizer<Schema, 'customer'>;
+export type CustomerRecord = TPartialRow<Schema, 'customer'>;
+export type CustomerConditionTree = TConditionTree<Schema, 'customer'>;
+export type CustomerFilter = TPaginatedFilter<Schema, 'customer'>;
+export type CustomerSortClause = TSortClause<Schema, 'customer'>;
+export type CustomerAggregation = TAggregation<Schema, 'customer'>;
+
+export type DealCustomizer = CollectionCustomizer<Schema, 'deal'>;
+export type DealRecord = TPartialRow<Schema, 'deal'>;
+export type DealConditionTree = TConditionTree<Schema, 'deal'>;
+export type DealFilter = TPaginatedFilter<Schema, 'deal'>;
+export type DealSortClause = TSortClause<Schema, 'deal'>;
+export type DealAggregation = TAggregation<Schema, 'deal'>;
+
+export type HousingCustomizer = CollectionCustomizer<Schema, 'housing'>;
+export type HousingRecord = TPartialRow<Schema, 'housing'>;
+export type HousingConditionTree = TConditionTree<Schema, 'housing'>;
+export type HousingFilter = TPaginatedFilter<Schema, 'housing'>;
+export type HousingSortClause = TSortClause<Schema, 'housing'>;
+export type HousingAggregation = TAggregation<Schema, 'housing'>;
+
+
 export type Schema = {
   'contract': {
     plain: {

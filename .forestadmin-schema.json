@@ -5,7 +5,7 @@
       "fields": [
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "commission_rate",
           "integration": null,
           "inverseOf": null,
@@ -21,7 +21,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "created_at",
           "integration": null,
           "inverseOf": null,
@@ -54,7 +54,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "displayName",
           "integration": null,
           "inverseOf": null,
@@ -70,7 +70,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "end_at",
           "integration": null,
           "inverseOf": null,
@@ -86,7 +86,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "id",
           "integration": null,
           "inverseOf": null,
@@ -102,7 +102,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "start_at",
           "integration": null,
           "inverseOf": null,
@@ -118,7 +118,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "updated_at",
           "integration": null,
           "inverseOf": null,
@@ -173,7 +173,7 @@
       "fields": [
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "created_at",
           "integration": null,
           "inverseOf": null,
@@ -189,7 +189,7 @@
         },
         {
           "defaultValue": null,
-          "enums": ["lead", "customer", "ex-customer"],
+          "enums": ["customer", "ex-customer", "lead"],
           "field": "customer_type",
           "integration": null,
           "inverseOf": null,
@@ -222,7 +222,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "email",
           "integration": null,
           "inverseOf": null,
@@ -238,7 +238,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "first_name",
           "integration": null,
           "inverseOf": null,
@@ -254,7 +254,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "id",
           "integration": null,
           "inverseOf": null,
@@ -270,7 +270,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "last_name",
           "integration": null,
           "inverseOf": null,
@@ -286,7 +286,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "phone",
           "integration": null,
           "inverseOf": null,
@@ -302,7 +302,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "updated_at",
           "integration": null,
           "inverseOf": null,
@@ -382,7 +382,7 @@
       "fields": [
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "closed_at",
           "integration": null,
           "inverseOf": null,
@@ -415,7 +415,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "created_at",
           "integration": null,
           "inverseOf": null,
@@ -465,7 +465,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "id",
           "integration": null,
           "inverseOf": null,
@@ -481,7 +481,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "owner",
           "integration": null,
           "inverseOf": null,
@@ -497,7 +497,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "stage",
           "integration": null,
           "inverseOf": null,
@@ -513,7 +513,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "updated_at",
           "integration": null,
           "inverseOf": null,
@@ -543,7 +543,7 @@
       "fields": [
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "address",
           "integration": null,
           "inverseOf": null,
@@ -559,7 +559,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "area",
           "integration": null,
           "inverseOf": null,
@@ -575,7 +575,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "city",
           "integration": null,
           "inverseOf": null,
@@ -591,7 +591,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "created_at",
           "integration": null,
           "inverseOf": null,
@@ -624,7 +624,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "description",
           "integration": null,
           "inverseOf": null,
@@ -640,7 +640,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "displayName",
           "integration": null,
           "inverseOf": null,
@@ -656,7 +656,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "id",
           "integration": null,
           "inverseOf": null,
@@ -672,7 +672,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "monthly_rent",
           "integration": null,
           "inverseOf": null,
@@ -688,7 +688,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "num_rooms",
           "integration": null,
           "inverseOf": null,
@@ -704,7 +704,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "picture",
           "integration": null,
           "inverseOf": null,
@@ -720,7 +720,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "updated_at",
           "integration": null,
           "inverseOf": null,
@@ -736,7 +736,7 @@
         },
         {
           "defaultValue": null,
-          "enums": null,
+          "enums": [],
           "field": "zip",
           "integration": null,
           "inverseOf": null,
@@ -762,10 +762,10 @@
       "segments": []
     }
   ],
-  "metadata": {
+  "meta": {
     "liana": "forest-nodejs-agent",
-    "liana_version": "1.13.4",
+    "liana_version": "1.28.3",
     "liana_features": null,
-    "stack": {"engine": "nodejs", "engine_version": "18.15.0"}
+    "stack": {"engine": "nodejs", "engine_version": "18.14.0"}
   }
 }

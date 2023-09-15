@@ -3,8 +3,9 @@ import type { SslMode } from '@forestadmin/datasource-sql';
 import type { Schema } from './typings';
 
 import 'dotenv/config';
-import { createAgent } from '@forestadmin/agent';
+import { ActionContext, createAgent } from '@forestadmin/agent';
 import { createSqlDataSource } from '@forestadmin/datasource-sql';
+import liveDemoBlocker, { blockActionForLiveDemoUser } from '@forestadmin-experimental/live-demo-blocker';
 
 // This object allows to configure your Forest Admin panel
 const agent = createAgent<Schema>({
@@ -30,6 +31,8 @@ agent.addDataSource(
   }),
 );
 
+agent.use(liveDemoBlocker);
+
 // SMART ACTIONS
 // Deal
 // TODO: add constraint stage has to be "new"
@@ -51,6 +54,9 @@ agent.customizeCollection('deal', collection => {
       },
     ],
     execute: async (context, resultBuilder) => {
+      const result = blockActionForLiveDemoUser(context as unknown as ActionContext, resultBuilder);
+      if (result) return result;
+
       // Retrieve values entered in the form and columns from the selected record.
       const { commission_rate, start_at } = context.formValues;
       const { id, owner } = await context.getRecord([
@@ -80,6 +86,9 @@ agent.customizeCollection('deal', collection =>
   collection.addAction('Close deal', {
     scope: 'Bulk',
     execute: async (context, resultBuilder) => {
+      const result = blockActionForLiveDemoUser(context as unknown as ActionContext, resultBuilder);
+      if (result) return result;
+
       const now = new Date();
       await context.collection.update(context.filter, { stage: 'closed', closed_at: now.toISOString() });
       return resultBuilder.success('Deal closed !');
@@ -92,6 +101,9 @@ agent.customizeCollection('deal', collection =>
   collection.addAction('Mark as rejected', {
     scope: 'Bulk',
     execute: async (context, resultBuilder) => {
+      const result = blockActionForLiveDemoUser(context as unknown as ActionContext, resultBuilder);
+      if (result) return result;
+
       await context.collection.update(context.filter, { stage: 'rejected' });
       return resultBuilder.success('Deal rejected: please add a note to explain why');
     },
@@ -114,7 +126,10 @@ agent.customizeCollection('deal', collection =>
 agent.customizeCollection('customer', collection =>
   collection.addAction('Mark as customer', {
     scope: 'Single',
-    execute: async context => {
+    execute: async (context, resultBuilder) => {
+      const result = blockActionForLiveDemoUser(context as unknown as ActionContext, resultBuilder);
+      if (result) return result;
+
       await context.collection.update(context.filter, { customer_type: 'customer' });
     },
 }),
@@ -123,7 +138,10 @@ agent.customizeCollection('customer', collection =>
 agent.customizeCollection('customer', collection =>
   collection.addAction('Mark as ex-customer', {
     scope: 'Single',
-    execute: async context => {
+    execute: async (context, resultBuilder) => {
+      const result = blockActionForLiveDemoUser(context as unknown as ActionContext, resultBuilder);
+      if (result) return result;
+
       await context.collection.update(context.filter, { customer_type: 'ex-customer' });
     },
 }),
