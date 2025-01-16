@@ -1,6 +1,7 @@
 import { pool } from './database';
 import { faker } from '@faker-js/faker';
 import { QueryResult } from 'pg';
+import getRandomPicture from "./images";
 
 /**
  * Populate housing
@@ -21,7 +22,7 @@ export async function populateHousing(): Promise<string[]> {
         // Insert 100 fake properties
         for (let i = 0; i < 100; i++) {
             const housing = {
-                picture: faker.image.urlLoremFlickr({ width: 640, height: 480, category: 'realestate' }),
+                picture: getRandomPicture(),
                 address: faker.location.streetAddress(),
                 zip: faker.location.zipCode(),
                 city: faker.location.city(),
